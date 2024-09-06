@@ -2,24 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Definición de variables CSS */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a; 
+  --foreground: #ededed; 
+  --transition-duration: 0.6s; 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Modo oscuro basado en la clase */
+.dark {
+
+  --background: #ffffff; 
+  --foreground: #0a0a0a;
 }
 
+/* Aplicar las variables al cuerpo */
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background var(--transition-duration) ease, color var(--transition-duration) ease;
 }
 
+/* Clase personalizada para el balanceo del texto */
 @layer utilities {
   .text-balance {
     text-wrap: balance;

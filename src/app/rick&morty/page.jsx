@@ -1,16 +1,15 @@
 'use client';
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-50">
-      {/* Botón con flecha en la parte superior izquierda */}
+    <div className="min-h-screen flex flex-col justify-center items-center bg-blackd">
       <div className="absolute top-4 left-4">
       <Link
           href="/home"
           className="flex items-center text-blue-600 hover:text-blue-700 font-bold"
         >
-          {/* Icono de flecha izquierda */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -25,36 +24,35 @@ export default function Home() {
               d="M10 19l-7-7m0 0l7-7m-7 7h18"
             />
           </svg>
-          Volver
+          Inicio
         </Link>
       </div>
-
+      <ThemeToggle /> 
       <main className="flex flex-col md:flex-row justify-center items-center w-full max-w-6xl p-4">
-        {/* Descripción en el lado izquierdo */}
+
         <div className="flex-1 p-4">
-          <h1 className="text-4xl font-bold mb-4">Breve Descripción</h1>
+          <h1 className="text-4xl font-bold mb-7 text-center">Rick & Morty</h1>
+          <h2 className="text-2xl font-bold mb-4">Breve Descripción</h2>
           <p className="text-lg mb-4">
-            Este es un proyecto en el que se utilizan tecnologías modernas como Tailwind CSS y Next.js. En esta página puedes ver un video de YouTube a la derecha y una descripción a la izquierda. El diseño es completamente responsive.
+          Se trata de una pagina inspirada en la serie animada Rick and Morty, esta diseñada para mostrar los personaje y las ubicaciones dicha serie, tiene un sistema de inicio de sección, búsqueda, favoritos, etc. 
+
           </p>
         </div>
 
-        {/* Video de YouTube en el lado derecho */}
         <div className="flex-1 p-4">
-          <div className="aspect-w-16 aspect-h-9">
+          <div className="w-full h-[450px] md:h-[300px]">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Cambia el enlace por el video de YouTube que quieras
-              title="YouTube video"
+              src="https://www.youtube.com/watch?v=HrBjeFesg_w"
+              title="FilmFlow"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
           </div>
-
-          {/* URL debajo del video */}
           <div className="mt-4 text-center">
             <a
-              href="https://www.ejemplo.com"
+              href="https://filmflow.chekogarcia.com.mx/"
               className="text-blue-600 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
