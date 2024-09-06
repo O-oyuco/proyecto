@@ -3,12 +3,14 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-black">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-50">
+      {/* Botón con flecha en la parte superior izquierda */}
       <div className="absolute top-4 left-4">
       <Link
           href="/home"
           className="flex items-center text-blue-600 hover:text-blue-700 font-bold"
         >
+          {/* Icono de flecha izquierda */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -23,35 +25,36 @@ export default function Home() {
               d="M10 19l-7-7m0 0l7-7m-7 7h18"
             />
           </svg>
-          Inicio
+          Volver
         </Link>
       </div>
 
       <main className="flex flex-col md:flex-row justify-center items-center w-full max-w-6xl p-4">
-
+        {/* Descripción en el lado izquierdo */}
         <div className="flex-1 p-4">
-          <h1 className="text-4xl font-bold mb-5 text-center">FilmFlow</h1>
-          <h2 className="text-3xl font-bold mb-4">Breve Descripción</h2>
+          <h1 className="text-4xl font-bold mb-4">Breve Descripción</h1>
           <p className="text-lg mb-4">
-          Aplicación FilmFlow, una app encargada de combinando lo mejor del cine con la última tecnología. Así dando la oportunidad a cineastas independiente de subir su contenido, yo me encargue del apartado de sus formulario, detalle de las películas, alertas, preview, estilos, manejo de los archivos Cloudinary y otros apartados menores
-
+            Este es un proyecto en el que se utilizan tecnologías modernas como Tailwind CSS y Next.js. En esta página puedes ver un video de YouTube a la derecha y una descripción a la izquierda. El diseño es completamente responsive.
           </p>
         </div>
 
+        {/* Video de YouTube en el lado derecho */}
         <div className="flex-1 p-4">
           <div className="aspect-w-16 aspect-h-9">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/watch?v=HrBjeFesg_w"
-              title="FilmFlow"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Cambia el enlace por el video de YouTube que quieras
+              title="YouTube video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
           </div>
+
+          {/* URL debajo del video */}
           <div className="mt-4 text-center">
             <a
-              href="https://filmflow.chekogarcia.com.mx/"
+              href="https://www.ejemplo.com"
               className="text-blue-600 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
