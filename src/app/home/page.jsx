@@ -1,5 +1,5 @@
 'use client';
-import ThemeToggle from "@/components/ThemeToggle";
+import ThemeToggle from "@/components/themeToggle";
 import Link from "next/link";
 
 export default function Home() {
@@ -40,10 +40,10 @@ export default function Home() {
 
         {/* Enlaces a proyectos */}
         <div className="flex items-center justify-center flex-wrap max-w-2xl mt-12">
-          <a href="/filmflow" className="m-4 p-6 text-left no-underline border border-gray-200 rounded-lg transition hover:text-blue-600 hover:border-blue-600 w-full sm:max-w-xs">
+          <Link href="/filmflow" className="m-4 p-6 text-left no-underline border border-gray-200 rounded-lg transition hover:text-blue-600 hover:border-blue-600 w-full sm:max-w-xs">
             <h3 className="mb-4 text-lg sm:text-xl">FilmFlow →</h3>
             <p className="m-0 text-sm sm:text-lg">Combinar lo mejor del cine con la última tecnología.</p>
-          </a>
+          </Link>
 
           <Link href="/rick&morty" className="m-4 p-6 text-left no-underline border border-gray-200 rounded-lg transition hover:text-blue-600 hover:border-blue-600 w-full sm:max-w-xs">
             <h3 className="mb-4 text-lg sm:text-xl">Rick & Morty →</h3>
@@ -55,10 +55,10 @@ export default function Home() {
             <p className="m-0 text-sm sm:text-lg">Pagina donde están registrados todos los países y su informacion relevante.</p>
           </Link>
 
-          <a href="#" className="m-4 p-6 text-left no-underline border border-gray-200 rounded-lg transition hover:text-blue-600 hover:border-blue-600 w-full sm:max-w-xs">
+          <Link href="#" className="m-4 p-6 text-left no-underline border border-gray-200 rounded-lg transition hover:text-blue-600 hover:border-blue-600 w-full sm:max-w-xs">
             <h3 className="mb-4 text-lg sm:text-xl">Acerca de →</h3>
             <p className="m-0 text-sm sm:text-lg">Conoce más sobre el proyecto.</p>
-          </a>
+          </Link>
         </div>
       </main>
     </div>

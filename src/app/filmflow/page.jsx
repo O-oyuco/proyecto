@@ -1,10 +1,13 @@
 'use client';
 import Link from "next/link";
-import ThemeToggle from "@/components/ThemeToggle";
+import ThemeToggle from "@/components/themeToggle";
+import ImageCarousel from "@/components/Carousel";
+import { FilmFlow } from "@/components/imagenDate";
+
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-blackd">
+    <div className="min-h-screen flex flex-col justify-start md:justify-center items-center bg-blackd">
       <div className="absolute top-4 left-4">
       <Link
           href="/home"
@@ -28,9 +31,8 @@ export default function Home() {
         </Link>
       </div>
       <ThemeToggle /> 
-      <main className="flex flex-col md:flex-row justify-center items-center w-full max-w-6xl p-4">
-
-        <div className="flex-1 p-4">
+      <main className="flex flex-col md:flex-row justify-center items-center w-full max-w-6xl p-4 space-y-4 md:space-y-0 md:space-x-4">
+        <div className="flex-1 p-4 order-1">
           <h1 className="text-4xl font-bold mb-7 text-center">FilmFlow</h1>
           <h2 className="text-2xl font-bold mb-4">Breve Descripción</h2>
           <p className="text-lg mb-4">
@@ -38,17 +40,9 @@ export default function Home() {
 
           </p>
         </div>
-
-        <div className="flex-1 p-4">
-          <div className="w-full h-[450px] md:h-[300px]">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/watch?v=HrBjeFesg_w"
-              title="FilmFlow"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+        <div className="flex-1 p-4 order-3 md:order-2">
+          <div className="w-full h-[250px] sm:h-[350px] md:h-[300px]">
+            <ImageCarousel images={FilmFlow} />
           </div>
           <div className="mt-4 text-center">
             <a
