@@ -4,8 +4,7 @@ import ThemeToggle from "@/components/themeToggle";
 import ImageCarousel from "@/components/carousel";
 import { RickandMorty } from "@/components/imagenDate";
 
-
-export default function Home() {
+export default function Rickandmorty() {
   return (
     <div className="min-h-screen flex flex-col justify-start md:justify-center items-center bg-blackd">
       <div className="absolute top-4 left-4">

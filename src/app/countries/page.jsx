@@ -1,11 +1,13 @@
 'use client';
 import Link from "next/link";
 import ThemeToggle from "@/components/themeToggle";
+import ImageCarousel from "@/components/carousel";
 
-export default function Home() {
+
+export default function Countries() {
   return (
-    <div className="min-h-screen flex flex-col bg-blackd">
-      <div className="absolute top-4 left-4 z-10">
+    <div className="min-h-screen flex flex-col justify-start md:justify-center items-center bg-blackd">
+      <div className="absolute top-4 left-4">
         <Link
           href="/home"
           className="flex items-center text-blue-600 hover:text-blue-700 font-bold"
@@ -29,24 +31,16 @@ export default function Home() {
       </div>
       <ThemeToggle />
       <main className="flex flex-col md:flex-row justify-center items-center w-full max-w-6xl p-4 mx-auto">
-        <div className="flex-1 p-4 mb-4 md:mb-0 flex flex-col justify-center items-center text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-5">Countries</h1>
-          <h2 className="text-xl sm:text-2xl font-bold mb-3">Breve Descripción</h2>
-          <p className="text-base sm:text-lg">
+        <div className="flex-1 p-4 order-1">
+          <h1 className="text-4xl font-bold mb-7 text-center">Countries</h1>
+          <h2 className="text-2xl font-bold mb-4">Breve Descripción</h2>
+          <p className="text-lg mb-4">
             Página donde se lleva un registro de todos los países, su información relevante, tipos de moneda, límites fronterizos, escudo, bandera, mapa interactivo con un sistema de ordenado y filtrado, agregar actividad por países, etc.
           </p>
-        </div>
-
-        <div className="flex-1 p-4 flex flex-col justify-center items-center">
-          <div className="w-full h-64 md:h-72 lg:h-80">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/watch?v=HrBjeFesg_w"
-              title="FilmFlow"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          </div>
+        <div className="flex-1 p-4 order-3 md:order-2">
+          <div className="w-full h-[250px] sm:h-[350px] md:h-[300px]">
+            <ImageCarousel images={RickandMorty} />
           </div>
           <div className="mt-4 text-center">
             <a
